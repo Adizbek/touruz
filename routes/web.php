@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'MainController@index');
+Route::get('/hotels', 'MainController@hotels');
+Route::get('/monuments', 'MainController@monuments');
