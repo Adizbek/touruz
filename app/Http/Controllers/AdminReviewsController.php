@@ -5,12 +5,12 @@
 	use DB;
 	use CRUDBooster;
 
-	class AdminNewsController extends \crocodicstudio\crudbooster\controllers\CBController {
+	class AdminReviewsController extends \crocodicstudio\crudbooster\controllers\CBController {
 
 	    public function cbInit() {
 
 			# START CONFIGURATION DO NOT REMOVE THIS LINE
-			$this->title_field = "title";
+			$this->title_field = "id";
 			$this->limit = "20";
 			$this->orderby = "id,desc";
 			$this->global_privilege = false;
@@ -25,34 +25,25 @@
 			$this->button_filter = true;
 			$this->button_import = false;
 			$this->button_export = false;
-			$this->table = "news";
+			$this->table = "reviews";
 			# END CONFIGURATION DO NOT REMOVE THIS LINE
 
 			# START COLUMNS DO NOT REMOVE THIS LINE
 			$this->col = [];
-			$this->col[] = ["label"=>"Title","name"=>"title"];
-			$this->col[] = ["label"=>"Short","name"=>"short"];
-			$this->col[] = ["label"=>"Full","name"=>"full"];
-			$this->col[] = ["label"=>"Poster","name"=>"poster"];
-			$this->col[] = ["label"=>"City Id","name"=>"city_id","join"=>"cities,name"];
+			$this->col[] = ["label"=>"Hotel Id","name"=>"hotel_id","join"=>"hotels,name"];
+			$this->col[] = ["label"=>"Text","name"=>"text"];
 			# END COLUMNS DO NOT REMOVE THIS LINE
 
 			# START FORM DO NOT REMOVE THIS LINE
 			$this->form = [];
-			$this->form[] = ['label'=>'Title','name'=>'title','type'=>'text','validation'=>'required|string|min:3|max:70','width'=>'col-sm-10','placeholder'=>'You can only enter the letter only'];
-			$this->form[] = ['label'=>'Short','name'=>'short','type'=>'wysiwyg','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Full','name'=>'full','type'=>'wysiwyg','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Poster','name'=>'poster','type'=>'upload','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'City Id','name'=>'city_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'cities,name'];
+			$this->form[] = ['label'=>'Hotel Id','name'=>'hotel_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'hotels,name'];
+			$this->form[] = ['label'=>'Text','name'=>'text','type'=>'textarea','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			# END FORM DO NOT REMOVE THIS LINE
 
 			# OLD START FORM
 			//$this->form = [];
-			//$this->form[] = ['label'=>'Title','name'=>'title','type'=>'text','validation'=>'required|string|min:3|max:70','width'=>'col-sm-10','placeholder'=>'You can only enter the letter only'];
-			//$this->form[] = ['label'=>'Short','name'=>'short','type'=>'wysiwyg','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			//$this->form[] = ['label'=>'Full','name'=>'full','type'=>'wysiwyg','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			//$this->form[] = ['label'=>'Poster','name'=>'poster','type'=>'filemanager','width'=>'col-sm-10'];
-			//$this->form[] = ['label'=>'City Id','name'=>'city_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'city,id'];
+			//$this->form[] = ["label"=>"Hotel Id","name"=>"hotel_id","type"=>"select2","required"=>TRUE,"validation"=>"required|integer|min:0","datatable"=>"hotel,id"];
+			//$this->form[] = ["label"=>"Text","name"=>"text","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
 			# OLD END FORM
 
 			/* 
