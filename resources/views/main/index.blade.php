@@ -516,22 +516,6 @@
             </div>
         </div>
     </div>
-
-
-    <div id="colorlib-subscribe" style="background-image: url(images/uzb-13.jpg);"
-         data-stellar-background-ratio="0.5">
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-md-offset-3 text-center colorlib-heading animate-box">
-                   <p>&nbsp;</p>
-                   <p>&nbsp;</p>
-                   <p>&nbsp;</p>
-                   <p>&nbsp;</p>
-                </div>
-            </div>
-        </div>
-    </div>
 @endsection
 
 
