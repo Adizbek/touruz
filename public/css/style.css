@@ -406,6 +406,11 @@ h1, h2, h3, h4, h5, h6, figure {
     #colorlib-footer {
       padding: 5em 0; } }
 
+.colorlib-footer{
+  padding: 0 0;
+  padding-top: 9em;
+}
+
 .colorlib-services {
   padding: 3em !important; }
   @media screen and (max-width: 768px) {
