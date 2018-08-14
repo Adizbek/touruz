@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Tour Template</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <meta name="author" content="" />
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <meta name="author" content=""/>
 
     <!-- Facebook and Twitter integration -->
     <meta property="og:title" content=""/>
@@ -15,10 +15,10 @@
     <meta property="og:url" content=""/>
     <meta property="og:site_name" content=""/>
     <meta property="og:description" content=""/>
-    <meta name="twitter:title" content="" />
-    <meta name="twitter:image" content="" />
-    <meta name="twitter:url" content="" />
-    <meta name="twitter:card" content="" />
+    <meta name="twitter:title" content=""/>
+    <meta name="twitter:image" content=""/>
+    <meta name="twitter:url" content=""/>
+    <meta name="twitter:card" content=""/>
 
     <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
 
@@ -73,11 +73,9 @@
                             <li class="has-dropdown">
                                 <a href="#">Cities</a>
                                 <ul class="dropdown">
-                                    <li><a href="#">Bukhara</a></li>
-                                    <li><a href="#">Bukhara</a></li>
-                                    <li><a href="#">Bukhara</a></li>
-                                    <li><a href="#">Bukhara</a></li>
-                                    <li><a href="#">Bukhara</a></li>
+                                    @foreach($cities as $city)
+                                        <li><a href="#">{{$city->name}}</a></li>
+                                    @endforeach
                                 </ul>
                             </li>
                             <li><a href="/hotels">Hotels</a></li>
@@ -97,7 +95,8 @@
             <div class="row row-pb-md">
                 <div class="col-md-3 colorlib-widget">
                     <h4>Tour Agency</h4>
-                    <p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta adipisci architecto culpa amet.</p>
+                    <p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta
+                        adipisci architecto culpa amet.</p>
                     <p>
                     <ul class="colorlib-social-icons">
                         <li><a href="#"><i class="icon-twitter"></i></a></li>
@@ -155,9 +154,12 @@
                 <div class="col-md-12 text-center">
                     <p>
                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart2" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                        Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+                        All rights reserved | This template is made with <i class="icon-heart2" aria-hidden="true"></i>
+                        by <a href="https://colorlib.com" target="_blank">Colorlib</a>
                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></span>
-                        <span class="block">Demo Images: <a href="http://unsplash.co/" target="_blank">Unsplash</a> , <a href="http://pexels.com/" target="_blank">Pexels.com</a></span>
+                        <span class="block">Demo Images: <a href="http://unsplash.co/" target="_blank">Unsplash</a> , <a
+                                    href="http://pexels.com/" target="_blank">Pexels.com</a></span>
                     </p>
                 </div>
             </div>

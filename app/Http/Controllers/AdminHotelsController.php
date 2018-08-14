@@ -33,7 +33,8 @@
 			$this->col[] = ["label"=>"Name","name"=>"name"];
 			$this->col[] = ["label"=>"Short","name"=>"short"];
 			$this->col[] = ["label"=>"Full","name"=>"full"];
-			$this->col[] = ["label"=>"Media","name"=>"id","join"=>"media,hotel_id"];
+			$this->col[] = ["label"=>"Poster","name"=>"poster","image"=>true];
+			$this->col[] = ["label"=>"Price","name"=>"price"];
 			# END COLUMNS DO NOT REMOVE THIS LINE
 
 			# START FORM DO NOT REMOVE THIS LINE
@@ -43,6 +44,8 @@
 			$this->form[] = ['label'=>'Full','name'=>'full','type'=>'wysiwyg','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Stars','name'=>'stars','type'=>'number','validation'=>'required','width'=>'col-sm-9'];
 			$this->form[] = ['label'=>'Address','name'=>'address','type'=>'googlemaps','validation'=>'required','width'=>'col-sm-9'];
+			$this->form[] = ['label'=>'Poster','name'=>'poster','type'=>'upload','validation'=>'required','width'=>'col-sm-9'];
+			$this->form[] = ['label'=>'Price','name'=>'price','type'=>'number','validation'=>'required','width'=>'col-sm-9'];
 			# END FORM DO NOT REMOVE THIS LINE
 
 			# OLD START FORM
@@ -52,6 +55,7 @@
 			//$this->form[] = ['label'=>'Full','name'=>'full','type'=>'wysiwyg','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			//$this->form[] = ['label'=>'Stars','name'=>'stars','type'=>'number','validation'=>'required','width'=>'col-sm-9'];
 			//$this->form[] = ['label'=>'Address','name'=>'address','type'=>'googlemaps','validation'=>'required','width'=>'col-sm-9'];
+			//$this->form[] = ['label'=>'Poster','name'=>'poster','type'=>'upload','validation'=>'required','width'=>'col-sm-9'];
 			# OLD END FORM
 
 			/* 
@@ -67,6 +71,8 @@
 	        | 
 	        */
 	        $this->sub_module = array();
+
+	        $this->sub_module[] = ['label'=>'Media','path'=>'media','parent_columns'=>'media,url','foreign_key'=>'hotel_id','button_color'=>'success','button_icon'=>'fa fa-bars'];
 
 
 	        /* 

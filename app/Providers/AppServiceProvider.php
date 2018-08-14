@@ -2,7 +2,9 @@
 
 namespace App\Providers;
 
+use App\City;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\View\View;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -14,6 +16,10 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         //
+
+        view()->composer('*', function (View $view) {
+            $view->with('cities', City::all(['id', 'name']));
+        });
     }
 
     /**
