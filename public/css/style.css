@@ -410,6 +410,9 @@ h1, h2, h3, h4, h5, h6, figure {
   padding: 0 0;
   padding-top: 9em;
 }
+.colorlib-tour{
+  padding: 6em 0;
+}
 
 .colorlib-services {
   padding: 3em !important; }
