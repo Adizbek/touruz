@@ -69,18 +69,18 @@
                     </div>
                     <div class="col-xs-10 text-right menu-1">
                         <ul>
-                            <li class="active"><a href="/">Home</a></li>
+                            <li class="active"><a href="/">Главная страница</a></li>
                             <li class="has-dropdown">
-                                <a href="#">Cities</a>
+                                <a href="#">Города</a>
                                 <ul class="dropdown">
                                     @foreach($cities as $city)
                                         <li><a href="#">{{$city->name}}</a></li>
                                     @endforeach
                                 </ul>
                             </li>
-                            <li><a href="/hotels">Hotels</a></li>
-                            <li><a href="/monuments">Monuments</a></li>
-                            <li><a href="/contact">Contact</a></li>
+                            <li><a href="/hotels">Отели</a></li>
+                            <li><a href="/monuments">Памятники</a></li>
+                            <li><a href="/contact">Контакт</a></li>
                         </ul>
                     </div>
                 </div>

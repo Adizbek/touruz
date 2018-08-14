@@ -10,14 +10,14 @@
                         <div class="row">
                             <div class="col-md-6 col-md-offset-3 col-sm-12 col-xs-12 slider-text">
                                 <div class="slider-text-inner text-center">
-                                    <h2>2 Days Tour</h2>
-                                    <h1>Amazing Maldives Tour</h1>
+                                    <h2>Испытывай</h2>
+                                    <h1>Лучшем поездком</h1>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </li>
-                <li style="background-image: url(images/img_bg_2.jpg);">
+                <li style="background-image: url(images/uzb-4.jpg);">
                     <div class="overlay"></div>
                     <div class="container-fluid">
                         <div class="row">
@@ -30,7 +30,7 @@
                         </div>
                     </div>
                 </li>
-                <li style="background-image: url(images/img_bg_5.jpg);">
+                <li style="background-image: url(images/uzb-5.jpg);">
                     <div class="overlay"></div>
                     <div class="container-fluids">
                         <div class="row">
@@ -43,7 +43,7 @@
                         </div>
                     </div>
                 </li>
-                <li style="background-image: url(images/img_bg_4.jpg);">
+                <li style="background-image: url(images/uzb-9.jpg);">
                     <div class="overlay"></div>
                     <div class="container-fluid">
                         <div class="row">
@@ -64,9 +64,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-md-offset-3 text-center colorlib-heading animate-box">
-                    <h2>Popular Destination</h2>
-                    <p>We love to tell our successful far far away, behind the word mountains, far from the countries
-                        Vokalia and Consonantia, there live the blind texts.</p>
+                    <h2>Популярные отели</h2>
+                    {{--<p>Большим преимуществом отеля является то, что это прибежище из дома.</p>--}}
+                    <p>Отель не похож на дом, но лучше, чем быть гостем дома.</p>
                 </div>
             </div>
         </div>
@@ -91,9 +91,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-md-offset-3 text-center colorlib-heading animate-box">
-                    <h2>Recent Blog</h2>
-                    <p>We love to tell our successful far far away, behind the word mountains, far from the countries
-                        Vokalia and Consonantia, there live the blind texts.</p>
+                    <h2>Последние новости</h2>
+                    <p>Удивительно, что количество новостей, которые происходят в Узбекистане каждый день, всегда точно соответствует нашему сайту.</p>
                 </div>
             </div>
             <div class="blog-flex">
@@ -263,9 +262,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-md-offset-3 text-center colorlib-heading animate-box">
-                    <h2>Our Satisfied Guests says</h2>
-                    <p>We love to tell our successful far far away, behind the word mountains, far from the countries
-                        Vokalia and Consonantia, there live the blind texts.</p>
+                    <h2>Удовлетворенный путешественник в Узбекистан рассказывает:</h2>
+                    <p>Наша природа заключается в движении; полное спокойствие - это смерть.</p>
                 </div>
             </div>
             <div class="row">
