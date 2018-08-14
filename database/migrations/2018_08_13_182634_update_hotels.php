@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class UpdateHotelsTable extends Migration
+class UpdateHotels extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,8 @@ class UpdateHotelsTable extends Migration
      */
     public function up()
     {
-        Schema::table('hotels', function (Blueprint $table) {
-            $table->integer('stars');
-            $table->string('address');
+        Schema::table('hotels', function (Blueprint $t){
+            $t->text('poster');
         });
     }
 
@@ -26,8 +25,6 @@ class UpdateHotelsTable extends Migration
      */
     public function down()
     {
-        Schema::table('hotels', function (Blueprint $table) {
-            //
-        });
+        //
     }
 }

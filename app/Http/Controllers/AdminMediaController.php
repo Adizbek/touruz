@@ -30,21 +30,21 @@
 
 			# START COLUMNS DO NOT REMOVE THIS LINE
 			$this->col = [];
-			$this->col[] = ["label"=>"Url","name"=>"url"];
+			$this->col[] = ["label"=>"Url","name"=>"url","image"=>true];
 			$this->col[] = ["label"=>"Media Type Id","name"=>"media_type_id","join"=>"media_type,name"];
 			$this->col[] = ["label"=>"Hotel Id","name"=>"hotel_id","join"=>"hotels,name"];
 			# END COLUMNS DO NOT REMOVE THIS LINE
 
 			# START FORM DO NOT REMOVE THIS LINE
 			$this->form = [];
-			$this->form[] = ['label'=>'Url','name'=>'url','type'=>'filemanager','validation'=>'required|url','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Url','name'=>'url','type'=>'upload','validation'=>'required','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Media Type Id','name'=>'media_type_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'media_type,name'];
 			$this->form[] = ['label'=>'Hotel Id','name'=>'hotel_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'hotels,name'];
 			# END FORM DO NOT REMOVE THIS LINE
 
 			# OLD START FORM
 			//$this->form = [];
-			//$this->form[] = ['label'=>'Url','name'=>'url','type'=>'text','validation'=>'required|url','width'=>'col-sm-10','placeholder'=>'Please enter a valid URL'];
+			//$this->form[] = ['label'=>'Url','name'=>'url','type'=>'upload','validation'=>'required','width'=>'col-sm-10'];
 			//$this->form[] = ['label'=>'Media Type Id','name'=>'media_type_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'media_type,name'];
 			//$this->form[] = ['label'=>'Hotel Id','name'=>'hotel_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'hotels,name'];
 			# OLD END FORM

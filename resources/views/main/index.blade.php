@@ -65,91 +65,25 @@
             <div class="row">
                 <div class="col-md-6 col-md-offset-3 text-center colorlib-heading animate-box">
                     <h2>Popular Destination</h2>
-                    <p>We love to tell our successful far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p>We love to tell our successful far far away, behind the word mountains, far from the countries
+                        Vokalia and Consonantia, there live the blind texts.</p>
                 </div>
             </div>
         </div>
         <div class="tour-wrap">
-            <a href="#" class="tour-entry animate-box">
-                <div class="tour-img" style="background-image: url(images/tour-1.jpg);">
-                </div>
-                <span class="desc">
-						<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Reviews</p>
-						<h2>Athens, Greece</h2>
-						<span class="city">Athens, Greece</span>
-						<span class="price">$450</span>
+            @foreach($hotels as $hotel)
+                <a href="#" class="tour-entry animate-box">
+                    <div class="tour-img" style="background-image: url({{$hotel->poster}});">
+                    </div>
+                    <span class="desc">
+						<h2>{{$hotel->name}} @include('widget.stars', ['stars' => $hotel->stars])</h2>
+						<span class="city">{{$hotel->address}}</span>
+						<span class="price">
+                            ${{$hotel->price}}, <small>{{$hotel->reviews->count()}} Reviews</small>
+                        </span>
 					</span>
-            </a>
-            <a href="#" class="tour-entry animate-box">
-                <div class="tour-img" style="background-image: url(images/tour-2.jpg);">
-                </div>
-                <span class="desc">
-						<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Reviews</p>
-						<h2>Family Tour in Thailand</h2>
-						<span class="city">Athens, Greece</span>
-						<span class="price">$450</span>
-					</span>
-            </a>
-            <a href="#" class="tour-entry animate-box">
-                <div class="tour-img" style="background-image: url(images/tour-3.jpg);">
-                </div>
-                <span class="desc">
-						<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Reviews</p>
-						<h2>Family Tour in Philippines</h2>
-						<span class="city">Lipa, Philippines</span>
-						<span class="price">$450</span>
-					</span>
-            </a>
-            <a href="#" class="tour-entry animate-box">
-                <div class="tour-img" style="background-image: url(images/tour-4.jpg);">
-                </div>
-                <span class="desc">
-						<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Reviews</p>
-						<h2>Family Tour in Greece</h2>
-						<span class="city">Athens, Greece</span>
-						<span class="price">$450</span>
-					</span>
-            </a>
-            <a href="#" class="tour-entry animate-box">
-                <div class="tour-img" style="background-image: url(images/tour-5.jpg);">
-                </div>
-                <span class="desc">
-						<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Reviews</p>
-						<h2>Family Tour in Greece</h2>
-						<span class="city">Athens, Greece</span>
-						<span class="price">$450</span>
-					</span>
-            </a>
-            <a href="#" class="tour-entry animate-box">
-                <div class="tour-img" style="background-image: url(images/tour-6.jpg);">
-                </div>
-                <span class="desc">
-						<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Reviews</p>
-						<h2>Family Tour in Greece</h2>
-						<span class="city">Athens, Greece</span>
-						<span class="price">$450</span>
-					</span>
-            </a>
-            <a href="#" class="tour-entry animate-box">
-                <div class="tour-img" style="background-image: url(images/tour-7.jpg);">
-                </div>
-                <span class="desc">
-						<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Reviews</p>
-						<h2>Family Tour in Greece</h2>
-						<span class="city">Athens, Greece</span>
-						<span class="price">$450</span>
-					</span>
-            </a>
-            <a href="#" class="tour-entry animate-box">
-                <div class="tour-img" style="background-image: url(images/tour-8.jpg);">
-                </div>
-                <span class="desc">
-						<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Reviews</p>
-						<h2>Family Tour in Greece</h2>
-						<span class="city">Athens, Greece</span>
-						<span class="price">$450</span>
-					</span>
-            </a>
+                </a>
+            @endforeach
         </div>
     </div>
 
@@ -158,7 +92,8 @@
             <div class="row">
                 <div class="col-md-6 col-md-offset-3 text-center colorlib-heading animate-box">
                     <h2>Recent Blog</h2>
-                    <p>We love to tell our successful far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p>We love to tell our successful far far away, behind the word mountains, far from the countries
+                        Vokalia and Consonantia, there live the blind texts.</p>
                 </div>
             </div>
             <div class="blog-flex">
@@ -166,43 +101,30 @@
                 </div>
                 <div class="blog-entry aside-stretch-right">
                     <div class="row">
-                        <div class="col-md-12 animate-box">
-                            <a href="blog.html" class="blog-post">
-                                <span class="img" style="background-image: url(images/blog-1.jpg);"></span>
-                                <div class="desc">
-                                    <span class="date">Feb 22, 2018</span>
-                                    <h3>A Definitive Guide to the Best Dining</h3>
-                                    <span class="cat">Activities</span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-12 animate-box">
-                            <a href="blog.html" class="blog-post">
-                                <span class="img" style="background-image: url(images/blog-2.jpg);"></span>
-                                <div class="desc">
-                                    <span class="date">Feb 22, 2018</span>
-                                    <h3>How These 5 People Found The Path to Their Dream Trip</h3>
-                                    <span class="cat">Activities</span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-12 animate-box">
-                            <a href="blog.html" class="blog-post">
-                                <span class="img" style="background-image: url(images/blog-4.jpg);"></span>
-                                <div class="desc">
-                                    <span class="date">Feb 22, 2018</span>
-                                    <h3>Our Secret Island Boat Tour Is just for You</h3>
-                                    <span class="cat">Activities</span>
-                                </div>
-                            </a>
-                        </div>
+                        @foreach($news as $ne)
+                            <div class="col-md-12 animate-box">
+                                <a href="blog.html" class="blog-post">
+                                    <span class="img" style="background-image: url({{$ne->poster}});"></span>
+                                    <div class="desc">
+                                        <span class="date">Feb 22, 2018</span>
+                                        <h3>{{$ne->title}}</h3>
+                                        <span class="city">
+                                            {{$ne->short }}
+                                        </span>
+                                        <br>
+                                        <span class="cat">{{$ne->city()->name}}</span>
+                                    </div>
+                                </a>
+                            </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div id="colorlib-intro" class="intro-img" style="background-image: url(images/cover-img-1.jpg);" data-stellar-background-ratio="0.5">
+    <div id="colorlib-intro" class="intro-img" style="background-image: url(images/cover-img-1.jpg);"
+         data-stellar-background-ratio="0.5">
         <div class="overlay"></div>
         <div class="container">
             <div class="row">
@@ -221,8 +143,11 @@
                             </div>
                             <div class="text-rights">
                                 <h3 class="title">Just hurry up limited offer!</h3>
-                                <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                                <p><a href="#" class="btn btn-primary">Book Now</a> <a href="#" class="btn btn-primary btn-outline">Read more</a></p>
+                                <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large
+                                    language ocean.</p>
+                                <p><a href="#" class="btn btn-primary">Book Now</a> <a href="#"
+                                                                                       class="btn btn-primary btn-outline">Read
+                                        more</a></p>
                             </div>
                         </div>
                     </div>
@@ -230,7 +155,8 @@
                 <div class="col-md-6 animate-box">
                     <div class="video-wrap">
                         <div class="video colorlib-video" style="background-image: url(images/img_bg_2.jpg);">
-                            <a href="https://vimeo.com/channels/staffpicks/93951774" class="popup-vimeo"><i class="icon-video"></i></a>
+                            <a href="https://vimeo.com/channels/staffpicks/93951774" class="popup-vimeo"><i
+                                        class="icon-video"></i></a>
                             <div class="video-overlay"></div>
                         </div>
                     </div>
@@ -244,7 +170,8 @@
             <div class="row">
                 <div class="col-md-6 col-md-offset-3 text-center colorlib-heading animate-box">
                     <h2>Recommended Hotels</h2>
-                    <p>We love to tell our successful far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p>We love to tell our successful far far away, behind the word mountains, far from the countries
+                        Vokalia and Consonantia, there live the blind texts.</p>
                 </div>
             </div>
             <div class="row">
@@ -252,53 +179,77 @@
                     <div class="owl-carousel">
                         <div class="item">
                             <div class="hotel-entry">
-                                <a href="hotels.html" class="hotel-img" style="background-image: url(images/hotel-1.jpg);">
-                                    <p class="price"><span>$120</span><small> /night</small></p>
+                                <a href="hotels.html" class="hotel-img"
+                                   style="background-image: url(images/hotel-1.jpg);">
+                                    <p class="price"><span>$120</span>
+                                        <small> /night</small>
+                                    </p>
                                 </a>
                                 <div class="desc">
-                                    <p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Reviews</p>
+                                    <p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i
+                                                    class="icon-star-full"></i><i class="icon-star-full"></i><i
+                                                    class="icon-star-full"></i></span> 545 Reviews</p>
                                     <h3><a href="#">Hotel Edison</a></h3>
                                     <span class="place">New York, USA</span>
-                                    <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                                    <p>A small river named Duden flows by their place and supplies it with the necessary
+                                        regelialia.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="item">
                             <div class="hotel-entry">
-                                <a href="hotels.html" class="hotel-img" style="background-image: url(images/hotel-2.jpg);">
-                                    <p class="price"><span>$120</span><small> /night</small></p>
+                                <a href="hotels.html" class="hotel-img"
+                                   style="background-image: url(images/hotel-2.jpg);">
+                                    <p class="price"><span>$120</span>
+                                        <small> /night</small>
+                                    </p>
                                 </a>
                                 <div class="desc">
-                                    <p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Reviews</p>
+                                    <p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i
+                                                    class="icon-star-full"></i><i class="icon-star-full"></i><i
+                                                    class="icon-star-full"></i></span> 545 Reviews</p>
                                     <h3><a href="#">Hotel Edison</a></h3>
                                     <span class="place">New York, USA</span>
-                                    <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                                    <p>A small river named Duden flows by their place and supplies it with the necessary
+                                        regelialia.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="item">
                             <div class="hotel-entry">
-                                <a href="hotels.html" class="hotel-img" style="background-image: url(images/hotel-3.jpg);">
-                                    <p class="price"><span>$120</span><small> /night</small></p>
+                                <a href="hotels.html" class="hotel-img"
+                                   style="background-image: url(images/hotel-3.jpg);">
+                                    <p class="price"><span>$120</span>
+                                        <small> /night</small>
+                                    </p>
                                 </a>
                                 <div class="desc">
-                                    <p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Reviews</p>
+                                    <p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i
+                                                    class="icon-star-full"></i><i class="icon-star-full"></i><i
+                                                    class="icon-star-full"></i></span> 545 Reviews</p>
                                     <h3><a href="#">Hotel Edison</a></h3>
                                     <span class="place">New York, USA</span>
-                                    <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                                    <p>A small river named Duden flows by their place and supplies it with the necessary
+                                        regelialia.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="item">
                             <div class="hotel-entry">
-                                <a href="hotels.html" class="hotel-img" style="background-image: url(images/hotel-4.jpg);">
-                                    <p class="price"><span>$120</span><small> /night</small></p>
+                                <a href="hotels.html" class="hotel-img"
+                                   style="background-image: url(images/hotel-4.jpg);">
+                                    <p class="price"><span>$120</span>
+                                        <small> /night</small>
+                                    </p>
                                 </a>
                                 <div class="desc">
-                                    <p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Reviews</p>
+                                    <p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i
+                                                    class="icon-star-full"></i><i class="icon-star-full"></i><i
+                                                    class="icon-star-full"></i></span> 545 Reviews</p>
                                     <h3><a href="#">Hotel Edison</a></h3>
                                     <span class="place">New York, USA</span>
-                                    <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                                    <p>A small river named Duden flows by their place and supplies it with the necessary
+                                        regelialia.</p>
                                 </div>
                             </div>
                         </div>
@@ -313,7 +264,8 @@
             <div class="row">
                 <div class="col-md-6 col-md-offset-3 text-center colorlib-heading animate-box">
                     <h2>Our Satisfied Guests says</h2>
-                    <p>We love to tell our successful far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p>We love to tell our successful far far away, behind the word mountains, far from the countries
+                        Vokalia and Consonantia, there live the blind texts.</p>
                 </div>
             </div>
             <div class="row">
@@ -325,7 +277,8 @@
                                 <span class="user">Alysha Myers</span>
                                 <small>Miami Florida, USA</small>
                                 <blockquote>
-                                    <p>" A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                                    <p>" A small river named Duden flows by their place and supplies it with the
+                                        necessary regelialia.</p>
                                 </blockquote>
                             </div>
                         </div>
@@ -335,7 +288,8 @@
                                 <span class="user">James Fisher</span>
                                 <small>New York, USA</small>
                                 <blockquote>
-                                    <p>One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+                                    <p>One day however a small line of blind text by the name of Lorem Ipsum decided to
+                                        leave for the far World of Grammar.</p>
                                 </blockquote>
                             </div>
                         </div>
@@ -345,7 +299,8 @@
                                 <span class="user">Jacob Webb</span>
                                 <small>Athens, Greece</small>
                                 <blockquote>
-                                    <p>Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.</p>
+                                    <p>Alphabet Village and the subline of her own road, the Line Lane. Pityful a
+                                        rethoric question ran over her cheek, then she continued her way.</p>
                                 </blockquote>
                             </div>
                         </div>
@@ -360,7 +315,8 @@
             <div class="row">
                 <div class="col-md-6 col-md-offset-3 text-center colorlib-heading animate-box">
                     <h2>Most Popular Travel Countries</h2>
-                    <p>We love to tell our successful far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p>We love to tell our successful far far away, behind the word mountains, far from the countries
+                        Vokalia and Consonantia, there live the blind texts.</p>
                 </div>
             </div>
             <div class="row">
@@ -370,34 +326,46 @@
                             <div class="col-md-6">
                                 <div class="row">
                                     <div class="col-md-6 animate-box">
-                                        <a  href="tours.html" class="f-tour-img" style="background-image: url(images/tour-1.jpg);">
+                                        <a href="tours.html" class="f-tour-img"
+                                           style="background-image: url(images/tour-1.jpg);">
                                             <div class="desc">
                                                 <h3>Rome - 5 Days</h3>
-                                                <p class="price"><span>$120</span> <small>/ person</small></p>
+                                                <p class="price"><span>$120</span>
+                                                    <small>/ person</small>
+                                                </p>
                                             </div>
                                         </a>
                                     </div>
                                     <div class="col-md-6 animate-box">
-                                        <a  href="tours.html" class="f-tour-img" style="background-image: url(images/tour-2.jpg);">
+                                        <a href="tours.html" class="f-tour-img"
+                                           style="background-image: url(images/tour-2.jpg);">
                                             <div class="desc">
                                                 <h3>Rome - 5 Days</h3>
-                                                <p class="price"><span>$120</span> <small>/ person</small></p>
+                                                <p class="price"><span>$120</span>
+                                                    <small>/ person</small>
+                                                </p>
                                             </div>
                                         </a>
                                     </div>
                                     <div class="col-md-6 animate-box">
-                                        <a  href="tours.html" class="f-tour-img" style="background-image: url(images/tour-3.jpg);">
+                                        <a href="tours.html" class="f-tour-img"
+                                           style="background-image: url(images/tour-3.jpg);">
                                             <div class="desc">
                                                 <h3>Rome - 5 Days</h3>
-                                                <p class="price"><span>$120</span> <small>/ person</small></p>
+                                                <p class="price"><span>$120</span>
+                                                    <small>/ person</small>
+                                                </p>
                                             </div>
                                         </a>
                                     </div>
                                     <div class="col-md-6 animate-box">
-                                        <a  href="tours.html" class="f-tour-img" style="background-image: url(images/tour-4.jpg);">
+                                        <a href="tours.html" class="f-tour-img"
+                                           style="background-image: url(images/tour-4.jpg);">
                                             <div class="desc">
                                                 <h3>Rome - 5 Days</h3>
-                                                <p class="price"><span>$120</span> <small>/ person</small></p>
+                                                <p class="price"><span>$120</span>
+                                                    <small>/ person</small>
+                                                </p>
                                             </div>
                                         </a>
                                     </div>
@@ -408,7 +376,11 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <h3>Italy, Europe</h3>
-                                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p><br>
+                                            <p>Far far away, behind the word mountains, far from the countries Vokalia
+                                                and Consonantia, there live the blind texts. Separated they live in
+                                                Bookmarksgrove right at the coast of the Semantics, a large language
+                                                ocean. A small river named Duden flows by their place and supplies it
+                                                with the necessary regelialia.</p><br>
                                         </div>
                                         <div class="col-md-12">
                                             <h4>Best Tours City</h4>
@@ -451,34 +423,46 @@
                             <div class="col-md-6 col-md-push-6">
                                 <div class="row">
                                     <div class="col-md-6 animate-box">
-                                        <a  href="tours.html" class="f-tour-img" style="background-image: url(images/tour-5.jpg);">
+                                        <a href="tours.html" class="f-tour-img"
+                                           style="background-image: url(images/tour-5.jpg);">
                                             <div class="desc">
                                                 <h3>Rome - 5 Days</h3>
-                                                <p class="price"><span>$120</span> <small>/ person</small></p>
+                                                <p class="price"><span>$120</span>
+                                                    <small>/ person</small>
+                                                </p>
                                             </div>
                                         </a>
                                     </div>
                                     <div class="col-md-6 animate-box">
-                                        <a  href="tours.html" class="f-tour-img" style="background-image: url(images/tour-6.jpg);">
+                                        <a href="tours.html" class="f-tour-img"
+                                           style="background-image: url(images/tour-6.jpg);">
                                             <div class="desc">
                                                 <h3>Rome - 5 Days</h3>
-                                                <p class="price"><span>$120</span> <small>/ person</small></p>
+                                                <p class="price"><span>$120</span>
+                                                    <small>/ person</small>
+                                                </p>
                                             </div>
                                         </a>
                                     </div>
                                     <div class="col-md-6 animate-box">
-                                        <a  href="tours.html" class="f-tour-img" style="background-image: url(images/tour-7.jpg);">
+                                        <a href="tours.html" class="f-tour-img"
+                                           style="background-image: url(images/tour-7.jpg);">
                                             <div class="desc">
                                                 <h3>Rome - 5 Days</h3>
-                                                <p class="price"><span>$120</span> <small>/ person</small></p>
+                                                <p class="price"><span>$120</span>
+                                                    <small>/ person</small>
+                                                </p>
                                             </div>
                                         </a>
                                     </div>
                                     <div class="col-md-6 animate-box">
-                                        <a  href="tours.html" class="f-tour-img" style="background-image: url(images/tour-8.jpg);">
+                                        <a href="tours.html" class="f-tour-img"
+                                           style="background-image: url(images/tour-8.jpg);">
                                             <div class="desc">
                                                 <h3>Rome - 5 Days</h3>
-                                                <p class="price"><span>$120</span> <small>/ person</small></p>
+                                                <p class="price"><span>$120</span>
+                                                    <small>/ person</small>
+                                                </p>
                                             </div>
                                         </a>
                                     </div>
@@ -489,7 +473,11 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <h3>Athens, Greece</h3>
-                                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p><br>
+                                            <p>Far far away, behind the word mountains, far from the countries Vokalia
+                                                and Consonantia, there live the blind texts. Separated they live in
+                                                Bookmarksgrove right at the coast of the Semantics, a large language
+                                                ocean. A small river named Duden flows by their place and supplies it
+                                                with the necessary regelialia.</p><br>
                                         </div>
                                         <div class="col-md-12">
                                             <h4>Best Tours City</h4>
@@ -532,7 +520,8 @@
     </div>
 
 
-    <div id="colorlib-subscribe" style="background-image: url(images/img_bg_2.jpg);" data-stellar-background-ratio="0.5">
+    <div id="colorlib-subscribe" style="background-image: url(images/img_bg_2.jpg);"
+         data-stellar-background-ratio="0.5">
         <div class="overlay"></div>
         <div class="container">
             <div class="row">
