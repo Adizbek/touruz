@@ -56,7 +56,7 @@
                     <div class="row">
                         <div class="col-md-12 text-center">
 {{--                            {{$hotels->pagination}}--}}
-                            <ul class="pagination">
+                            <ul class=  "pagination">
                                 <li class="disabled"><a href="#">&laquo;</a></li>
                                 <li class="active"><a href="#">1</a></li>
                                 <li><a href="#">2</a></li>

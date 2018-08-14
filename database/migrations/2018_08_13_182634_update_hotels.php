@@ -14,7 +14,7 @@ class UpdateHotels extends Migration
     public function up()
     {
         Schema::table('hotels', function (Blueprint $t){
-            $t->text('poster');
+            $t->string('poster')->nullable();
         });
     }
 

@@ -18,7 +18,7 @@ class CreateHotels extends Migration
 
             $table->string('name');
             $table->string('short');
-            $table->string('full');
+            $table->text('full');
 
             $table->timestamps();
         });

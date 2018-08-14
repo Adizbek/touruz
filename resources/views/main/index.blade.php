@@ -96,7 +96,7 @@
                 </div>
             </div>
             <div class="blog-flex">
-                <div class="f-entry-img" style="background-image: url(images/blog-3.jpg);">
+                <div class="f-entry-img" style="background-image: url(images/uzb-15.jpg);">
                 </div>
                 <div class="blog-entry aside-stretch-right">
                     <div class="row">
