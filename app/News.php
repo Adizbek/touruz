@@ -12,4 +12,9 @@ class News extends Model
     {
         return $this->belongsTo(City::class)->get()->first();
     }
+
+    function date()
+    {
+        return $this->created_at->format('M d, Y');
+    }
 }

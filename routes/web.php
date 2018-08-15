@@ -11,9 +11,11 @@
 |
 */
 
-Route::get('/', 'MainController@index');
-Route::get('/hotels', 'MainController@hotels');
-Route::get('/monuments', 'MainController@monuments');
+Route::get('/', 'MainController@index')->name('home');
+Route::get('/hotels', 'MainController@hotels')->name('hotels');
+Route::get('/hotels/{id}', 'MainController@hotelView')->name('hotel.view');
+Route::get('/monuments', 'MainController@monuments')->name('monuments');
+Route::get('/monuments/view/{id}', 'MainController@monumentsView')->name('monument.view');
 Route::get('/news', 'MainController@news')->name('news');
-Route::get('/news', 'MainController@newsView')->name('news.view');
+Route::get('/news/{id}', 'MainController@newsView')->name('news.view');
 Route::get('/item', 'MainController@item');

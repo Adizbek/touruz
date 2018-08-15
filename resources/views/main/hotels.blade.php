@@ -26,22 +26,22 @@
             <div class="row">
                 <div class="col-md-12">
                     <h1>Отели</h1>
-                    <hr>
+                    <div>{{Breadcrumbs::render('hotels')}}</div>
                     <div class="row">
                         <div class="wrap-division">
                             @foreach($hotels as $hotel)
                                 <div class="col-md-4 col-sm-4 animate-box">
                                     <div class="hotel-entry">
-                                        <a href="hotel-room.html" class="hotel-img"
+                                        <a href="{{route('hotel.view', ['id' => $hotel->id])}}" class="hotel-img"
                                            style="background-image: url({{$hotel->poster}});">
                                             <p class="price"><span>{{$hotel->price}}$</span>
-                                                <small> /night</small>
+                                                <small> / ночь</small>
                                             </p>
                                         </a>
 
                                         <div class="desc">
                                             <h3>
-                                                <a href="hotel-room.html">{{ $hotel->name }}</a>
+                                                <a href="{{route('hotel.view', ['id' => $hotel->id])}}">{{ $hotel->name }}</a>
                                                 @include('widget.stars', ['stars'=> $hotel->stars])
                                             </h3>
                                             <span class="place">{{$hotel->city()->name}}</span>

@@ -16,7 +16,7 @@ class CreateTableMedia extends Migration
         Schema::create('media', function (Blueprint $table) {
             $table->increments('id');
 
-            $table->string('url');
+            $table->string('url')->nullable();
             $table->integer('media_type_id');
             $table->integer('hotel_id');
 

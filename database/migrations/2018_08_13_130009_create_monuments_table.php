@@ -19,7 +19,7 @@ class CreateMonumentsTable extends Migration
             $table->string('name');
             $table->mediumText('short');
             $table->text('full');
-            $table->string('location');
+            $table->string('poster')->nullable();
             $table->integer('city_id');
             $table->string('vrtour');
 

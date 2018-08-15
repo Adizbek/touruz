@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\City;
 use App\Hotel;
+use App\Monument;
 use App\News;
 use Illuminate\Http\Request;
 
@@ -23,9 +24,24 @@ class MainController extends Controller
         return view('main.hotels', compact('hotels'));
     }
 
+    public function hotelView($id)
+    {
+        $hotel = Hotel::findOrFail($id);
+        return view('main.hotel_view', compact('hotel'));
+
+    }
+
     public function monuments()
     {
-        return view('main.monuments');
+        $monuments = Monument::latest()->paginate(6);
+        return view('main.monuments', compact('monuments'));
+    }
+
+    public function monumentsView($id)
+    {
+        $monument = Monument::findOrFail($id);
+        $random = Monument::inRandomOrder()->limit(6)->get();
+        return view('main.monument_view', compact('monument', 'random'));
     }
 
     public function news(Request $request)
@@ -44,6 +60,13 @@ class MainController extends Controller
     }
 
 
+    public function newsView($id)
+    {
+        $news = News::findOrFail($id);
+        $latest = News::latest()->limit(4)->get();
+
+        return view('main.news_view', compact('news', 'latest'));
+    }
 
     public function item()
     {

@@ -27,7 +27,7 @@
             <div class="row">
                 <div class="col-xs-12">
                     <h1>Новости Узбекистана </h1>
-                    <hr>
+                    <div>{{Breadcrumbs::render('news')}}</div>
                 </div>
 
                 <div class="col-md-8">
@@ -42,7 +42,7 @@
                                             <span>{{$ne->city()->name}}</span>
                                         </p>
                                     </div>
-                                    <h2><a href="#">{{$ne->title}}</a></h2>
+                                    <h2><a href="{{route('news.view', ['id' => $ne->id])}}">{{$ne->title}}</a></h2>
                                     <p>{{$ne->short}}</p>
                                 </div>
                             </article>
@@ -61,7 +61,7 @@
                             <h3 class="sidebar-heading">Последные новости</h3>
                             <div class="blog-entry-side">
                                 @foreach($latest as $ne)
-                                    <a href="blog.html" class="blog-post">
+                                    <a href="{{route('news.view', ['id' => $ne->id])}}" class="blog-post">
                                         <span class="img" style="background-image: url({{$ne->poster}});"></span>
                                         <div class="desc">
                                             <span class="date">{{$ne->created_at->format("M d, Y")}}</span>

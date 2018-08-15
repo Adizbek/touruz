@@ -33,7 +33,7 @@
 			$this->col[] = ["label"=>"Name","name"=>"name"];
 			$this->col[] = ["label"=>"Short","name"=>"short"];
 			$this->col[] = ["label"=>"Full","name"=>"full"];
-			$this->col[] = ["label"=>"Location","name"=>"location"];
+			$this->col[] = ["label"=>"Poster","name"=>"poster"];
 			$this->col[] = ["label"=>"City Id","name"=>"city_id","join"=>"cities,name"];
 			$this->col[] = ["label"=>"Vrtour","name"=>"vrtour"];
 			# END COLUMNS DO NOT REMOVE THIS LINE
@@ -43,7 +43,7 @@
 			$this->form[] = ['label'=>'Name','name'=>'name','type'=>'text','validation'=>'required|string|min:3|max:70','width'=>'col-sm-10','placeholder'=>'You can only enter the letter only'];
 			$this->form[] = ['label'=>'Short','name'=>'short','type'=>'textarea','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Full','name'=>'full','type'=>'wysiwyg','validation'=>'required|string|min:5|max:5000','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Location','name'=>'location','type'=>'text','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Poster','name'=>'poster','type'=>'upload','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'City Id','name'=>'city_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'cities,name'];
 			$this->form[] = ['label'=>'Vrtour','name'=>'vrtour','type'=>'text','width'=>'col-sm-10'];
 			# END FORM DO NOT REMOVE THIS LINE
@@ -55,7 +55,7 @@
 			//$this->form[] = ['label'=>'Full','name'=>'full','type'=>'wysiwyg','validation'=>'required|string|min:5|max:5000','width'=>'col-sm-10'];
 			//$this->form[] = ['label'=>'Location','name'=>'location','type'=>'text','width'=>'col-sm-10'];
 			//$this->form[] = ['label'=>'City Id','name'=>'city_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'cities,name'];
-			//$this->form[] = ['label'=>'Vrtour','name'=>'vrtour','type'=>'number','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'Vrtour','name'=>'vrtour','type'=>'text','width'=>'col-sm-10'];
 			# OLD END FORM
 
 			/* 
