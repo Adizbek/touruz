@@ -77,7 +77,7 @@
         </div>
         <div class="tour-wrap">
             @foreach($hotels as $hotel)
-                <a href="#" class="tour-entry animate-box">
+                <a href="{{route('hotel.view', ['id' => $hotel->id])}}" class="tour-entry animate-box">
                     <div class="tour-img" style="background-image: url({{$hotel->poster}});">
                     </div>
                     <span class="desc">
@@ -108,7 +108,7 @@
                     <div class="row">
                         @foreach($news as $ne)
                             <div class="col-md-12 animate-box">
-                                <a href="blog.html" class="blog-post">
+                                <a href="{{ route('news.view', ['id' => $ne->id]) }}" class="blog-post">
                                     <span class="img" style="background-image: url({{$ne->poster}});"></span>
                                     <div class="desc">
                                         <span class="date">{{$ne->created_at->format("M d, Y")}}</span>
