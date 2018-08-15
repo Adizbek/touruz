@@ -105,7 +105,7 @@
                                 <a href="blog.html" class="blog-post">
                                     <span class="img" style="background-image: url({{$ne->poster}});"></span>
                                     <div class="desc">
-                                        <span class="date">Feb 22, 2018</span>
+                                        <span class="date">{{$ne->created_at->format("M d, Y")}}</span>
                                         <h3>{{$ne->title}}</h3>
                                         <span class="city">
                                             {{$ne->short }}
@@ -122,7 +122,7 @@
         </div>
     </div>
 
-    <div id="colorlib-intro" class="intro-img" style="background-image: url(images/cover-img-1.jpg);"
+    <div id="colorlib-intro" class="intro-img" style="background-image: url(images/uzb-9.jpg);"
          data-stellar-background-ratio="0.5">
         <div class="overlay"></div>
         <div class="container">
@@ -153,8 +153,8 @@
                 </div>
                 <div class="col-md-6 animate-box">
                     <div class="video-wrap">
-                        <div class="video colorlib-video" style="background-image: url(images/img_bg_2.jpg);">
-                            <a href="https://vimeo.com/channels/staffpicks/93951774" class="popup-vimeo"><i
+                        <div class="video colorlib-video" style="background-image: url(https://i.ytimg.com/vi/GNqZaPM5NeU/maxresdefault.jpg);">
+                            <a href="https://mover.uz/video/embed/i1dfUqMm/" class="popup-vimeo"><i
                                         class="icon-video"></i></a>
                             <div class="video-overlay"></div>
                         </div>

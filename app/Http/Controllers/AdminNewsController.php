@@ -41,7 +41,7 @@
 			$this->form = [];
 			$this->form[] = ['label'=>'Title','name'=>'title','type'=>'text','validation'=>'required|string|min:3|max:70','width'=>'col-sm-10','placeholder'=>'You can only enter the letter only'];
 			$this->form[] = ['label'=>'Short','name'=>'short','type'=>'textarea','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Full','name'=>'full','type'=>'wysiwyg','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Full','name'=>'full','type'=>'wysiwyg','validation'=>'required|min:1|max:16000','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Poster','name'=>'poster','type'=>'upload','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'City Id','name'=>'city_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'cities,name'];
 			# END FORM DO NOT REMOVE THIS LINE

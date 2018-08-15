@@ -25,67 +25,32 @@
     <div id="colorlib-blog">
         <div class="container">
             <div class="row">
+                <div class="col-xs-12">
+                    <h1>Новости Узбекистана </h1>
+                    <hr>
+                </div>
+
                 <div class="col-md-8">
                     <div class="wrap-division">
-                        <article class="animate-box">
-                            <div class="blog-img" style="background-image: url(images/blog-1.jpg);"></div>
-                            <div class="desc">
-                                <div class="meta">
-                                    <p>
-                                        <span>Feb 24, 2018 </span>
-                                        <span>admin </span>
-                                        <span><a href="#">2 Comments</a></span>
-                                    </p>
+                        @foreach($news as $ne)
+                            <article class="animate-box">
+                                <div class="blog-img" style="background-image: url({{$ne->poster}});"></div>
+                                <div class="desc">
+                                    <div class="meta">
+                                        <p>
+                                            <span>{{$ne->created_at->format('M d, Y')}}</span>
+                                            <span>{{$ne->city()->name}}</span>
+                                        </p>
+                                    </div>
+                                    <h2><a href="#">{{$ne->title}}</a></h2>
+                                    <p>{{$ne->short}}</p>
                                 </div>
-                                <h2><a href="#">A Definitive Guide to the Best Dining</a></h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, qui quod ipsum
-                                    harum id, minima nesciunt! Saepe soluta, vitae quas expedita voluptatem voluptates
-                                    placeat numquam provident quis, atque nisi iure?</p>
-                            </div>
-                        </article>
-                        <article class="animate-box">
-                            <div class="blog-img" style="background-image: url(images/blog-2.jpg);"></div>
-                            <div class="desc">
-                                <div class="meta">
-                                    <p>
-                                        <span>Feb 24, 2018 </span>
-                                        <span>admin </span>
-                                        <span><a href="#">1 Comments</a></span>
-                                    </p>
-                                </div>
-                                <h2><a href="#">How These 5 People Found The Path to Their Dream Trip</a></h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, qui quod ipsum
-                                    harum id, minima nesciunt! Saepe soluta, vitae quas expedita voluptatem voluptates
-                                    placeat numquam provident quis, atque nisi iure?</p>
-                            </div>
-                        </article>
-                        <article class="animate-box">
-                            <div class="blog-img" style="background-image: url(images/blog-3.jpg);"></div>
-                            <div class="desc">
-                                <div class="meta">
-                                    <p>
-                                        <span>Feb 24, 2018 </span>
-                                        <span>admin </span>
-                                        <span><a href="#">0 Comments</a></span>
-                                    </p>
-                                </div>
-                                <h2><a href="#">Our Secret Island Boat Tour Is just for You</a></h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, qui quod ipsum
-                                    harum id, minima nesciunt! Saepe soluta, vitae quas expedita voluptatem voluptates
-                                    placeat numquam provident quis, atque nisi iure?</p>
-                            </div>
-                        </article>
+                            </article>
+                        @endforeach
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <ul class="pagination">
-                                <li class="disabled"><a href="#">&laquo;</a></li>
-                                <li class="active"><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li>
-                                <li><a href="#">&raquo;</a></li>
-                            </ul>
+                            {{$news->links()}}
                         </div>
                     </div>
                 </div>
@@ -93,49 +58,30 @@
                 <div class="col-md-4">
                     <div class="sidebar-wrap">
                         <div class="side animate-box">
-                            <h3 class="sidebar-heading">Recent Post</h3>
+                            <h3 class="sidebar-heading">Последные новости</h3>
                             <div class="blog-entry-side">
-                                <a href="blog.html" class="blog-post">
-                                    <span class="img" style="background-image: url(images/blog-3.jpg);"></span>
-                                    <div class="desc">
-                                        <span class="date">Feb 24, 2018</span>
-                                        <h3>Our Secret Island Boat Tour Is just for You</h3>
-                                        <span class="cat">Tour</span>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="blog-entry-side">
-                                <a href="blog.html" class="blog-post">
-                                    <span class="img" style="background-image: url(images/blog-2.jpg);"></span>
-                                    <div class="desc">
-                                        <span class="date">Feb 24, 2018</span>
-                                        <h3>How These 5 People Found The Path to Their Dream Trip</h3>
-                                        <span class="cat">Hotel</span>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="blog-entry-side">
-                                <a href="blog.html" class="blog-post">
-                                    <span class="img" style="background-image: url(images/blog-3.jpg);"></span>
-                                    <div class="desc">
-                                        <span class="date">Feb 24, 2018</span>
-                                        <h3>Our Secret Island Boat Tour Is just for You</h3>
-                                        <span class="cat">Cruises</span>
-                                    </div>
-                                </a>
+                                @foreach($latest as $ne)
+                                    <a href="blog.html" class="blog-post">
+                                        <span class="img" style="background-image: url({{$ne->poster}});"></span>
+                                        <div class="desc">
+                                            <span class="date">{{$ne->created_at->format("M d, Y")}}</span>
+                                            <h3>{{$ne->title}}</h3>
+                                            <span class="cat">{{$ne->city()->name}}</span>
+                                        </div>
+                                    </a>
+                                @endforeach
                             </div>
                         </div>
+
                         <div class="side animate-box">
-                            <div class="sidebar-heading">Categories</div>
+                            <div class="sidebar-heading">Города</div>
                             <ul class="category">
-                                <li><a href="#"><i class="icon-check"></i> Car rental<span>(2)</span></a></li>
-                                <li><a href="#"><i class="icon-check"></i> Flight<span>(2)</span></a></li>
-                                <li><a href="#"><i class="icon-check"></i> Activities<span>(3)</span></a></li>
-                                <li><a href="#"><i class="icon-check"></i> Hotel<span>(5)</span></a></li>
-                                <li><a href="#"><i class="icon-check"></i> Tour<span>(2)</span></a></li>
-                                <li><a href="#"><i class="icon-check"></i> Travel<span>(3)</span></a></li>
-                                <li><a href="#"><i class="icon-check"></i> Night<span>(2)</span></a></li>
-                                <li><a href="#"><i class="icon-check"></i> Cruises<span>(2)</span></a></li>
+                                <li><b><a href="{{route('news')}}">Все</a></b></li>
+
+                                @foreach($cities as $city)
+                                    <li><a href="{{route('news', ['city' => $city->id])}}">{{$city->name}}
+                                            <span>({{$city->news()->count()}})</span></a></li>
+                                @endforeach
                             </ul>
                         </div>
                     </div>

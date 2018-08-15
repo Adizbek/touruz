@@ -18,7 +18,7 @@ class CreateTableNews extends Migration
 
             $table->string('title');
             $table->string('short');
-            $table->string('full');
+            $table->text('full');
 
             $table->string('poster');
 
