@@ -26,4 +26,9 @@ class MainController extends Controller
     {
         return view('main.monuments');
     }
+
+    public function news()
+    {
+        return view('main.news');
+    }
 }

@@ -80,6 +80,7 @@
                             </li>
                             <li><a href="/hotels">Отели</a></li>
                             <li><a href="/monuments">Памятники</a></li>
+                            <li><a href="/news">Новости</a></li>
                             <li><a href="/contact">Контакт</a></li>
                         </ul>
                     </div>
