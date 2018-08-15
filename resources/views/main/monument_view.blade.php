@@ -1,5 +1,11 @@
 @extends('main.layout')
 
+
+@section('nav.monuments')
+    class="active"
+@endsection
+
+
 @section('content')
     <aside id="colorlib-hero">
         <div class="flexslider">

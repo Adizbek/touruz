@@ -1,6 +1,9 @@
 @extends('main.layout')
 
 
+@section('nav.main')
+    class="active"
+@endsection
 
 @section('content')
     <aside id="colorlib-hero">
@@ -94,7 +97,8 @@
             <div class="row">
                 <div class="col-md-6 col-md-offset-3 text-center colorlib-heading animate-box">
                     <h2>Последние новости</h2>
-                    <p>Удивительно, что количество новостей, которые происходят в Узбекистане каждый день, всегда точно соответствует нашему сайту.</p>
+                    <p>Удивительно, что количество новостей, которые происходят в Узбекистане каждый день, всегда точно
+                        соответствует нашему сайту.</p>
                 </div>
             </div>
             <div class="blog-flex">
@@ -155,7 +159,8 @@
                 </div>
                 <div class="col-md-6 animate-box">
                     <div class="video-wrap">
-                        <div class="video colorlib-video" style="background-image: url(https://i.ytimg.com/vi/GNqZaPM5NeU/maxresdefault.jpg);">
+                        <div class="video colorlib-video"
+                             style="background-image: url(https://i.ytimg.com/vi/GNqZaPM5NeU/maxresdefault.jpg);">
                             <a href="https://mover.uz/video/embed/i1dfUqMm/" class="popup-vimeo"><i
                                         class="icon-video"></i></a>
                             <div class="video-overlay"></div>
