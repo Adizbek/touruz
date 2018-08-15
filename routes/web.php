@@ -15,3 +15,4 @@ Route::get('/', 'MainController@index');
 Route::get('/hotels', 'MainController@hotels');
 Route::get('/monuments', 'MainController@monuments');
 Route::get('/news', 'MainController@news');
+Route::get('/item', 'MainController@item');

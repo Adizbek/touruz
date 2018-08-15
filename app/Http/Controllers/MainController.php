@@ -31,4 +31,9 @@ class MainController extends Controller
     {
         return view('main.news');
     }
+
+    public function item()
+    {
+        return view('main.item');
+    }
 }
