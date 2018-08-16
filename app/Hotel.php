@@ -7,16 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 class Hotel extends Model
 {
     use CreatedDate;
+    use HasCity;
 
     public function reviews()
     {
         return $this->hasMany(Review::class);
     }
 
-    public function city()
-    {
-        return $this->belongsTo(City::class);
-    }
 
     public function media()
     {

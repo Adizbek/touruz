@@ -3,6 +3,9 @@
 namespace App\Providers;
 
 use App\City;
+use App\Hotel;
+use App\Monument;
+use App\News;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\View\View;
 
@@ -19,6 +22,10 @@ class AppServiceProvider extends ServiceProvider
 
         view()->composer('*', function (View $view) {
             $view->with('cities', City::all(['id', 'name']));
+
+            $view->with('fNews', News::latest()->limit(6)->get());
+            $view->with('fMonuments', Monument::latest()->limit(6)->get());
+            $view->with('fHotels', Hotel::latest()->limit(6)->get());
         });
     }
 

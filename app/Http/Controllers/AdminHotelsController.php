@@ -32,9 +32,9 @@
 			$this->col = [];
 			$this->col[] = ["label"=>"Name","name"=>"name"];
 			$this->col[] = ["label"=>"Short","name"=>"short"];
-//			$this->col[] = ["label"=>"Full","name"=>"full"];
 			$this->col[] = ["label"=>"Poster","name"=>"poster","image"=>true];
 			$this->col[] = ["label"=>"Price","name"=>"price"];
+			$this->col[] = ["label"=>"Pinned","name"=>"pinned"];
 			# END COLUMNS DO NOT REMOVE THIS LINE
 
 			# START FORM DO NOT REMOVE THIS LINE
@@ -46,17 +46,19 @@
 			$this->form[] = ['label'=>'Address','name'=>'address','type'=>'googlemaps','validation'=>'required','width'=>'col-sm-9'];
 			$this->form[] = ['label'=>'Poster','name'=>'poster','type'=>'upload','validation'=>'required','width'=>'col-sm-9'];
 			$this->form[] = ['label'=>'Price','name'=>'price','type'=>'number','validation'=>'required','width'=>'col-sm-9'];
+			$this->form[] = ['label'=>'Pin','name'=>'pinned','type'=>'number','width'=>'col-sm-9'];
 			# END FORM DO NOT REMOVE THIS LINE
 
 			# OLD START FORM
 			//$this->form = [];
 			//$this->form[] = ['label'=>'Name','name'=>'name','type'=>'text','validation'=>'required|string|min:3|max:70','width'=>'col-sm-10','placeholder'=>'You can only enter the letter only'];
-			//$this->form[] = ['label'=>'Short','name'=>'short','type'=>'wysiwyg','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			//$this->form[] = ['label'=>'Full','name'=>'full','type'=>'wysiwyg','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'Short','name'=>'short','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'Full','name'=>'full','type'=>'wysiwyg','validation'=>'required|min:1|max:20000','width'=>'col-sm-10'];
 			//$this->form[] = ['label'=>'Stars','name'=>'stars','type'=>'number','validation'=>'required','width'=>'col-sm-9'];
 			//$this->form[] = ['label'=>'Address','name'=>'address','type'=>'googlemaps','validation'=>'required','width'=>'col-sm-9'];
 			//$this->form[] = ['label'=>'Poster','name'=>'poster','type'=>'upload','validation'=>'required','width'=>'col-sm-9'];
 			//$this->form[] = ['label'=>'Price','name'=>'price','type'=>'number','validation'=>'required','width'=>'col-sm-9'];
+			//$this->form[] = ['label'=>'Pin','name'=>'pin','type'=>'checkbox','validation'=>'required','width'=>'col-sm-9'];
 			# OLD END FORM
 
 			/* 

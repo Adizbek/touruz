@@ -12,10 +12,11 @@ class MainController extends Controller
 {
     public function index()
     {
+        $recommend = Hotel::wherePinned(1)->get();
         $hotels = Hotel::limit(8)->latest()->get();
         $news = News::limit(3)->latest()->get();
 
-        return view('main.index', compact('hotels', 'news'));
+        return view('main.index', compact('hotels', 'news', 'recommend'));
     }
 
     public function hotels()

@@ -137,18 +137,21 @@
                     <div class="intro-desc">
                         <div class="text-salebox">
                             {{--<div class="text-lefts">--}}
-                                {{--<div class="sale-box">--}}
-                                    {{--<div class="sale-box-top">--}}
-                                        {{--<h2 class="number">100</h2>--}}
-                                        {{--<span class="sup-1">%</span>--}}
-                                        {{--<span class="sup-2">Off</span>--}}
-                                    {{--</div>--}}
-                                    {{--<h2 class="text-sale">Sale</h2>--}}
-                                {{--</div>--}}
+                            {{--<div class="sale-box">--}}
+                            {{--<div class="sale-box-top">--}}
+                            {{--<h2 class="number">100</h2>--}}
+                            {{--<span class="sup-1">%</span>--}}
+                            {{--<span class="sup-2">Off</span>--}}
+                            {{--</div>--}}
+                            {{--<h2 class="text-sale">Sale</h2>--}}
+                            {{--</div>--}}
                             {{--</div>--}}
                             <div class="text-rights">
                                 <h3 class="title">Cказочные Города</h3>
-                                <p>Великие архитекторы по истории Узбекистана создали дворцы, мечети, мавзолеи и всемирно известные памятники древней архитектуры. Многие из этих шедевров не сохранились, но, посетив те, которые были сохранены, можно заглянуть в страницы истории уникальной страны.</p>
+                                <p>Великие архитекторы по истории Узбекистана создали дворцы, мечети, мавзолеи и
+                                    всемирно известные памятники древней архитектуры. Многие из этих шедевров не
+                                    сохранились, но, посетив те, которые были сохранены, можно заглянуть в страницы
+                                    истории уникальной страны.</p>
                                 <p>
                                     <a href="#" class="btn btn-primary">Узнать больше</a>
                                     {{--<a href="#" class="btn btn-primary btn-outline">Read more</a>--}}
@@ -175,145 +178,88 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-md-offset-3 text-center colorlib-heading animate-box">
-                    <h2>Recommended Hotels</h2>
-                    <p>We love to tell our successful far far away, behind the word mountains, far from the countries
-                        Vokalia and Consonantia, there live the blind texts.</p>
+                    <h2>Рекомендуемые отели</h2>
+                    <p>В большинстве этих гостиниц нам предоставляют гарантированный блок комнат по лучшим ценам и
+                        приоритет в
+                        подтверждении заявок, что очень удобно как для наших партнеров, так и для наших туристов.</p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12 animate-box">
                     <div class="owl-carousel">
-                        <div class="item">
-                            <div class="hotel-entry">
-                                <a href="hotels.html" class="hotel-img"
-                                   style="background-image: url(images/hotel-1.jpg);">
-                                    <p class="price"><span>$120</span>
-                                        <small> /night</small>
-                                    </p>
-                                </a>
-                                <div class="desc">
-                                    <p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i
-                                                    class="icon-star-full"></i><i class="icon-star-full"></i><i
-                                                    class="icon-star-full"></i></span> 545 Reviews</p>
-                                    <h3><a href="#">Hotel Edison</a></h3>
-                                    <span class="place">New York, USA</span>
-                                    <p>A small river named Duden flows by their place and supplies it with the necessary
-                                        regelialia.</p>
+                        @foreach($recommend as $r)
+                            <div class="item">
+                                <div class="hotel-entry">
+                                    <a href="{{route('hotel.view', ['id' =>$r->id])}}" class="hotel-img"
+                                       style="background-image: url({{url($r->poster)}});">
+                                        <p class="price"><span>${{$r->price}}</span>
+                                            <small> /ночь</small>
+                                        </p>
+                                    </a>
+                                    <div class="desc">
+                                        <p class="star">{!! $r->stars() !!} {{$r->reviews()->count()}} отзыва</p>
+                                        <h3><a href="#">{{$r->name}}</a></h3>
+                                        <span class="place">{{$r->city()}}</span>
+                                        <p>{{$r->short}}</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="item">
-                            <div class="hotel-entry">
-                                <a href="hotels.html" class="hotel-img"
-                                   style="background-image: url(images/hotel-2.jpg);">
-                                    <p class="price"><span>$120</span>
-                                        <small> /night</small>
-                                    </p>
-                                </a>
-                                <div class="desc">
-                                    <p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i
-                                                    class="icon-star-full"></i><i class="icon-star-full"></i><i
-                                                    class="icon-star-full"></i></span> 545 Reviews</p>
-                                    <h3><a href="#">Hotel Edison</a></h3>
-                                    <span class="place">New York, USA</span>
-                                    <p>A small river named Duden flows by their place and supplies it with the necessary
-                                        regelialia.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="hotel-entry">
-                                <a href="hotels.html" class="hotel-img"
-                                   style="background-image: url(images/hotel-3.jpg);">
-                                    <p class="price"><span>$120</span>
-                                        <small> /night</small>
-                                    </p>
-                                </a>
-                                <div class="desc">
-                                    <p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i
-                                                    class="icon-star-full"></i><i class="icon-star-full"></i><i
-                                                    class="icon-star-full"></i></span> 545 Reviews</p>
-                                    <h3><a href="#">Hotel Edison</a></h3>
-                                    <span class="place">New York, USA</span>
-                                    <p>A small river named Duden flows by their place and supplies it with the necessary
-                                        regelialia.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="hotel-entry">
-                                <a href="hotels.html" class="hotel-img"
-                                   style="background-image: url(images/hotel-4.jpg);">
-                                    <p class="price"><span>$120</span>
-                                        <small> /night</small>
-                                    </p>
-                                </a>
-                                <div class="desc">
-                                    <p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i
-                                                    class="icon-star-full"></i><i class="icon-star-full"></i><i
-                                                    class="icon-star-full"></i></span> 545 Reviews</p>
-                                    <h3><a href="#">Hotel Edison</a></h3>
-                                    <span class="place">New York, USA</span>
-                                    <p>A small river named Duden flows by their place and supplies it with the necessary
-                                        regelialia.</p>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div id="colorlib-testimony" class="colorlib-light-grey">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-md-offset-3 text-center colorlib-heading animate-box">
-                    <h2>Удовлетворенный путешественник в Узбекистан рассказывает:</h2>
-                    <p>Наша природа заключается в движении; полное спокойствие - это смерть.</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2 animate-box">
-                    <div class="owl-carousel2">
-                        <div class="item">
-                            <div class="testimony text-center">
-                                <span class="img-user" style="background-image: url(images/person1.jpg);"></span>
-                                <span class="user">Alysha Myers</span>
-                                <small>Miami Florida, USA</small>
-                                <blockquote>
-                                    <p>" A small river named Duden flows by their place and supplies it with the
-                                        necessary regelialia.</p>
-                                </blockquote>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="testimony text-center">
-                                <span class="img-user" style="background-image: url(images/person2.jpg);"></span>
-                                <span class="user">James Fisher</span>
-                                <small>New York, USA</small>
-                                <blockquote>
-                                    <p>One day however a small line of blind text by the name of Lorem Ipsum decided to
-                                        leave for the far World of Grammar.</p>
-                                </blockquote>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="testimony text-center">
-                                <span class="img-user" style="background-image: url(images/person3.jpg);"></span>
-                                <span class="user">Jacob Webb</span>
-                                <small>Athens, Greece</small>
-                                <blockquote>
-                                    <p>Alphabet Village and the subline of her own road, the Line Lane. Pityful a
-                                        rethoric question ran over her cheek, then she continued her way.</p>
-                                </blockquote>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    {{--<div id="colorlib-testimony" class="colorlib-light-grey">--}}
+        {{--<div class="container">--}}
+            {{--<div class="row">--}}
+                {{--<div class="col-md-6 col-md-offset-3 text-center colorlib-heading animate-box">--}}
+                    {{--<h2>Удовлетворенный путешественник в Узбекистан рассказывает:</h2>--}}
+                    {{--<p>Наша природа заключается в движении; полное спокойствие - это смерть.</p>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+            {{--<div class="row">--}}
+                {{--<div class="col-md-8 col-md-offset-2 animate-box">--}}
+                    {{--<div class="owl-carousel2">--}}
+                        {{--<div class="item">--}}
+                            {{--<div class="testimony text-center">--}}
+                                {{--<span class="img-user" style="background-image: url(images/person1.jpg);"></span>--}}
+                                {{--<span class="user">Alysha Myers</span>--}}
+                                {{--<small>Miami Florida, USA</small>--}}
+                                {{--<blockquote>--}}
+                                    {{--<p>" A small river named Duden flows by their place and supplies it with the--}}
+                                        {{--necessary regelialia.</p>--}}
+                                {{--</blockquote>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                        {{--<div class="item">--}}
+                            {{--<div class="testimony text-center">--}}
+                                {{--<span class="img-user" style="background-image: url(images/person2.jpg);"></span>--}}
+                                {{--<span class="user">James Fisher</span>--}}
+                                {{--<small>New York, USA</small>--}}
+                                {{--<blockquote>--}}
+                                    {{--<p>One day however a small line of blind text by the name of Lorem Ipsum decided to--}}
+                                        {{--leave for the far World of Grammar.</p>--}}
+                                {{--</blockquote>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                        {{--<div class="item">--}}
+                            {{--<div class="testimony text-center">--}}
+                                {{--<span class="img-user" style="background-image: url(images/person3.jpg);"></span>--}}
+                                {{--<span class="user">Jacob Webb</span>--}}
+                                {{--<small>Athens, Greece</small>--}}
+                                {{--<blockquote>--}}
+                                    {{--<p>Alphabet Village and the subline of her own road, the Line Lane. Pityful a--}}
+                                        {{--rethoric question ran over her cheek, then she continued her way.</p>--}}
+                                {{--</blockquote>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+    {{--</div>--}}
 
 @endsection
 
