@@ -11,13 +11,13 @@
 
     <!-- Facebook and Twitter integration -->
     <meta property="og:title" content="Travel to Uzbekistan"/>
-    <meta property="og:image" content="{{url("/images/uzb-1.jpg"}}"/>
-    <meta property="og:url" content="{{url("/images/uzb-1.jpg"}}"/>
+    <meta property="og:image" content="{{ url("/images/uzb-1.jpg")}} "/>
+    <meta property="og:url" content="{{url("/images/uzb-1.jpg")}}"/>
     <meta property="og:site_name" content="Travel to Uzbekistan"/>
     <meta property="og:description" content="Travel to Uzbekistan"/>
     <meta name="twitter:title" content="Travel to Uzbekistan"/>
-    <meta name="twitter:image" content="{{url("/images/uzb-1.jpg"}}"/>
-    <meta name="twitter:url" content="{{url("/images/uzb-1.jpg"}}"/>
+    <meta name="twitter:image" content="{{url("/images/uzb-1.jpg")}}"/>
+    <meta name="twitter:url" content="{{url("/images/uzb-1.jpg")}}"/>
     {{--<meta name="twitter:card" content=""/>--}}
 
     <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
