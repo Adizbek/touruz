@@ -8,7 +8,7 @@ http://touruz.herokuapp.com/
 <br>
 Used modern, responsive design
 
-![IMG1](screens/a.png)
-![IMG2](screens/c.png)
-![IMG3](screens/b.png)
-![IMG4](screens/d.png)
+![IMG1](https://raw.githubusercontent.com/Adizbek/touruz/master/screens/a.png)
+![IMG2](https://raw.githubusercontent.com/Adizbek/touruz/master/screens/c.png)
+![IMG3](https://raw.githubusercontent.com/Adizbek/touruz/master/screens/b.png)
+![IMG4](https://raw.githubusercontent.com/Adizbek/touruz/master/screens/d.png)
