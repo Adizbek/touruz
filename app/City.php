@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class City extends Model
 {
-    protected $dateFormat = 'Y-m-d H:i:sT';
+//    protected $dateFormat = 'Y-m-d H:i:sT';
 
     public function news()
     {
