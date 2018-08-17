@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class News extends Model
 {
+//2018-08-14 14:24:59+05
+    protected $dateFormat = 'Y-m-d H:i:sT';
     protected $table = 'news';
 
     function city()

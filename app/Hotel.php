@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Hotel extends Model
 {
+    protected $dateFormat = 'Y-m-d H:i:sT';
+
     use CreatedDate;
     use HasCity;
 
